@@ -1,0 +1,54 @@
+:root {
+    --color-primary: #1F4E8C;
+    --color-secondary: #122140;
+    --color-lighterblue: #3F8EBF;
+    --color-lightblue: #59B5D9;
+    --color-almostacqua: #77DCF2;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-almostacqua);
+    font-size: 24px;
+    background-color: hsla(45, 2%, 36%, 0.846);
+    background-image: url(../img/blue-gradient-background-53srhvf8tm9cjklp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+img {
+    margin: 20px 0;
+}
+
+i {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.my-width {
+    width: 700px;
+    border-radius: 2em;
+}
+
+.my-btn {
+    margin-left: 10px;
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-secondary);
+}
+
+.fa-trash {
+    color: black;
+    margin-left: 10px;
+}
+
+.fa-trash:hover {
+    color: grey;
+}

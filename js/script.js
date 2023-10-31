@@ -4,22 +4,27 @@ createApp({
     return {
       tasks: [
         {
-          text: "a",
-          done: false,
+          text: "Wake up",
+          done: true,
           id: 1,
         },
         {
-          text: "b",
+          text: "Code",
           done: false,
           id: 2,
         },
         {
-          text: "c",
+          text: "Eat",
           done: false,
           id: 3,
         },
+        {
+          text: "Sleep",
+          done: false,
+          id: 4,
+        },
       ],
-      nextId: 4,
+      nextId: 5,
       todoText: "",
     };
   },

@@ -20,22 +20,24 @@
 
 <body>
     <div id="app">
-        <header class="d-flex justify-content-center align-items-center">
-            <img src="" alt="">
-            <input type="text" v-model="todoText" @keyup.enter="addTask">
-            <button @click="addTask">Add Task</button>
-        </header>
-        <main>
-            <ul v-if="tasks.length > 0">
-                <li v-for="(todo, index) in tasks" :key="todo.id">
-                    <span :class="{'done': todo.done }" @click="taskDone(index)">{{todo.text}}</span>
-                    <i class="fa-solid fa-trash" @click="removeTask(todo.id)"></i>
-                </li>
-            </ul>
-            <div v-else>
-                Prova
-            </div>
-        </main>
+        <div class="container">
+            <header class="d-flex justify-content-center align-items-center">
+                <img src="" alt="">
+                <input type="text" v-model="todoText" @keyup.enter="addTask">
+                <button @click="addTask">Add Task</button>
+            </header>
+            <main>
+                <ul v-if="tasks.length > 0">
+                    <li v-for="(todo, index) in tasks" :key="todo.id">
+                        <span :class="{'done': todo.done }" @click="taskDone(index)">{{todo.text}}</span>
+                        <i class="fa-solid fa-trash" @click="removeTask(todo.id)"></i>
+                    </li>
+                </ul>
+                <div v-else>
+                    Prova
+                </div>
+            </main>
+        </div>
     </div>
 
     <!-- My JS -->

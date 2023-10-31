@@ -15,17 +15,31 @@
     <!-- link to Font-Family and CSS Files -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Document Title -->
-    <title>Document</title>
+    <title>To do List</title>
 </head>
 
 <body>
     <div id="app">
-        <main></main>
+        <header class="d-flex justify-content-center align-items-center">
+            <img src="" alt="">
+            <input type="text" v-model="todoText" @keyup.enter="addTask">
+            <button @click="addTask">Add Task</button>
+        </header>
+        <main>
+            <ul v-if="tasks.length > 0">
+                <li v-for="(todo, index) in tasks" :key="todo.id">
+                    <span :class="{'done': todo.done }" @click="taskDone(index)">{{todo.text}}</span>
+                    <i class="fa-solid fa-trash" @click="removeTask(todo.id)"></i>
+                </li>
+            </ul>
+            <div v-else>
+                Prova
+            </div>
+        </main>
     </div>
 
     <!-- My JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="js/utility.js"></script>
     <script src="js/script.js"></script>
 </body>
 
